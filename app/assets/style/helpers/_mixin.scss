@@ -1,0 +1,15 @@
+$pc: 992px;
+@mixin pc {
+  @media screen and (min-width: $pc) {
+    @content;
+  }
+}
+
+/* Vertical gradient, from top to bottom */
+@mixin gradient-y($start-color: $primary, $end-color: $secondary, $start-percent: null, $end-percent: null) {
+  background-image: linear-gradient(180deg, $start-color $start-percent, $end-color $end-percent);
+}
+/* Horizontal gradient, from left to right */
+@mixin gradient-x($start-color: $primary, $end-color: $secondary, $start-percent: null, $end-percent: null) {
+  background-image: linear-gradient(104deg, $start-color $start-percent, $end-color $end-percent);
+}

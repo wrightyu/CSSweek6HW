@@ -1,0 +1,46 @@
+.classWrap {
+  background: #1c1c1c;
+  .card {
+    background: #2d2d2d;
+    border-radius: 24px;
+  }
+  .card-footer {
+    span {
+      font-family: 'Azeret Mono', monospace;
+    }
+  }
+  .btnGradient {
+    @include gradient-x($secondary, $primary, null, null);
+  }
+  .swiper-slide {
+    width: 34.13%;
+    border-radius: 8px;
+  }
+  .swiper-slide2, .swiper-slide3, .swiper-slide6 {
+    width: 48.53% !important;
+  }
+  .swiper-wrapper {
+    .active {
+      background: rgba(0,0,0,0) !important;
+      border-color: #62DB54 !important;
+      color: #62DB54 !important;
+    }
+  }
+}
+.protrait {
+  img {
+    height: 100px;
+    width: 100px;
+  }
+}
+
+@include pc {
+  .classWrap {
+    .swiper-slide {
+      width: 8.89% !important;
+    }
+    .swiper-slide2, .swiper-slide3, .swiper-slide6 {
+      width: 12.64% !important;
+    }
+  }
+}

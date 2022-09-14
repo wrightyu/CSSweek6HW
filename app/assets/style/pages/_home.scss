@@ -1,0 +1,394 @@
+.homeBannerWrap {
+  background: #1c1c1c;
+}
+
+.homeBannerBg {
+  background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/week6-202207/bg_home_mobile.jpg?raw=true");
+  // background-image: url("../../images/week6-202207/bg_home_mobile.jpg");
+  height: 93.33vw;
+  width: 100%;
+  background-size: cover;
+}
+
+.whiteFrameDeco {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: white;
+}
+.whiteFrameDecoLT {
+  top: -5px;
+  left: -5px;
+}
+.whiteFrameDecoRT {
+  top: -5px;
+  right: -5px;
+}
+.whiteFrameDecoRB {
+  bottom: -5px;
+  right: -5px;
+}
+.whiteFrameDecoLB {
+  bottom: -5px;
+  left: -5px;
+}
+.gradientY {
+  background-image: linear-gradient(180deg, $secondary, $primary);
+  background-clip: text;
+  color: transparent;
+  
+}
+
+.sloganWrap {
+  background: #2d2d2d;
+  .material-icons {
+    font-size: 48px !important;
+  }
+  .card {
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 12px;
+    &:hover {
+      background: #202020 !important;
+      border-color: $primary !important;
+      .material-icons {
+        background-image: linear-gradient(180deg, $secondary, $primary) !important;
+        background-clip: text !important;
+        color: transparent !important;
+      }
+    }
+  }
+}
+.sloganHead, .courseHead, .courseSwiperHead, .popularHead, .motivationHead, .articlesHead, .studentSwiperHead {
+  &::after {
+    position: absolute;
+    left: 43%;
+    top: calc(100% + 16px);
+    content: "";
+    height: 4px;
+    width: 14%;
+    background-color: $primary;
+  }
+}
+.motivationHead {
+  &::after {
+    background-color: white;
+  }
+}
+.courseWrap {
+  background: #1C1C1C;
+  .card {
+    border-radius: 12px;
+  }
+  .stepNum {
+    font-family: 'Azeret Mono', monospace;
+    background: #1C1C1C;
+    top: -36px;
+    left: 60px;
+  }
+}
+.courseSwiperWrap {
+  background: #2d2d2d;
+
+  .swiper-slide {
+    width: 34.13%;
+    border-radius: 8px;
+  }
+  .swiper-slide1, .swiper-slide2, .swiper-slide5 {
+    width: 48.53% !important;
+  }
+}
+.popularWrap {
+  background: #1c1c1c;
+  .card {
+    background: #2d2d2d !important;
+    border-color: rgba(0,0,0,0) !important;
+    border-radius: 12px;
+  }
+  img {
+    height: 100px;
+    width: 100px;
+  }
+  .btn {
+    border-radius: 8px;
+    @include gradient-x;
+  }
+}
+.motivationWrap {
+  .motivationImg {
+    cursor: pointer;
+    z-index: 0;
+    width: 100%;
+    height: 73.06vw;
+    &:hover {
+      .filter {
+        background-color: rgba(0,0,0,0.25);
+      }
+      .material-icons {
+        color: $primary !important;
+      }
+      .motivationHead {
+        &::after {
+          background-color: $primary !important;
+        }
+      }
+    }
+  }
+  .motivationImg1 {
+    // background-image: url("../../images/week6-202207/info01.jpg");
+    background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/week6-202207/info01.jpg?raw=true");
+  }
+  .motivationImg2 {
+    // background-image: url("../../images/week6-202207/info02.jpg");
+    background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/week6-202207/info02.jpg?raw=true");
+  }
+  .motivationImg3 {
+    // background-image: url("../../images/week6-202207/info03.jpg");
+    background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/week6-202207/info03.jpg?raw=true");
+  }
+  .motivationImg4 {
+    // background-image: url("../../images/week6-202207/info04.jpg");
+    background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/week6-202207/info04.jpg?raw=true");
+  }
+  .filter {
+    background-color: rgba(0,0,0,0.75);
+    z-index: 1;
+    width: 100%;
+    height: 73.06vw;
+  }
+  .card {
+    z-index: 2;
+  }
+}
+.articlesWrap {
+  background: #1c1c1c;
+  .greenFrame {
+    border-color: rgba(0,0,0,0) !important;
+    border-radius: 12px;
+    z-index: 0;
+  }
+  .card {
+    border-color: rgba(0,0,0,0) !important;
+  }
+}
+.studentSwiperWrap {
+  background: #000000;
+}
+
+.slider{
+  .swiper {
+    width: 100%;
+    @include pc {
+      height: 429px;
+    }
+    &-img {
+      border-radius: 24px;
+      position: relative;
+      top: 0;
+      left: 5px;
+      width: calc(100% - 5px);
+      height: 213px;
+      margin-bottom: 40px;
+      @include pc {
+        position: absolute;
+        left: 10px;
+        width: 60%;
+        height: 90%;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border: 1px solid #7C7E77;
+        border-radius: 24px;
+        z-index: -1;
+        left: -5px;
+        top: 5px;
+        @include pc {
+          left: -10px;
+        top: 10px;
+        }
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 24px;
+      }
+    }
+    .card {
+      position: relative;
+      width: 100%;
+      padding: 24px;
+      margin-bottom: 32px;
+      border-radius: 24px 24px 24px 0;
+      @include pc {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 45%;
+        padding: 32px;
+        margin-bottom: 0;
+      }
+      h3 {
+        font-size: 18px;
+      }
+      &-img {
+        border-radius: 50%;
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        right: 24px;
+        top: -30px;
+        @include pc {
+          width: 100px;
+          height: 100px;
+          right: 32px;
+          top: -50px;
+        }
+      }
+      
+    }
+  
+    .swiper-button-next:after, .swiper-button-prev:after {
+      content: "";
+    }
+  
+    &-button-next, &-button-prev {
+      position: unset;
+      width: 24px;
+      height: 24px;
+      margin-top: -27px;
+      color: $primary;
+    }
+  
+    .swiper-pagination {
+      position: unset;
+      width: auto;
+      .swiper-pagination-bullet {
+        background-color: $primary;
+        opacity: initial;
+        &-active {
+          width: 16px;
+          border-radius: 100px;
+        }
+      }
+    }
+  
+    &-buttons {
+      z-index: 10;
+      height: 24px;
+      @include pc {
+        position: absolute;
+        bottom: -1px;
+        left: 30%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+}
+.joinUsWrap {
+  .material-icons {
+    font-size: 80px;
+  }
+  .joinUs {
+    background: #202020;
+    border-radius: 24px;
+    h2 {
+      font-size: 28px;
+    }
+    p {
+      font-size: 18px;
+    }
+  }
+}
+
+@include pc {
+  .homeBannerWrap {
+    padding-top: 80px;
+    padding-bottom: 64px;
+  }
+  .homeBannerBg {
+    background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/week6-202207/bg_home.jpg?raw=true");
+    // background-image: url("../../images/week6-202207/bg_home.jpg");
+    height: 37.13vw;
+  }
+  .homeBannerContent {
+    width: 44.44vw !important;
+    .fs-4 {
+      font-size: 48px !important;
+    }
+    .fs-9 {
+      font-size: 18px !important;
+    }
+  }
+  .sloganHead,.courseHead, .courseSwiperHead, .popularHead, .motivationHead {
+    font-size: 28px !important;
+    &::after {
+      left: 0;
+      width: 15%;
+    }
+  }
+  .courseHead, .courseSwiperHead, .popularHead {
+    &::after {
+      left: 48%;
+      width: 4%;
+    }
+  }
+  .courseSwiperWrap {
+    .swiper-slide {
+      width: 8.89% !important;
+    }
+    .swiper-slide1, .swiper-slide2, .swiper-slide5 {
+      width: 12.64% !important;
+    }
+  }
+  .motivationWrap {
+    .material-icons {
+      font-size: 32px !important;
+    }
+    .motivationImg {
+      width: 25%;
+      height: 43.71vw;
+    }
+    .filter {
+      height: 43.71vw;
+    }
+  }
+  .articlesWrap {
+    .greenFrame {
+      &:hover {
+        border: 1px solid $primary !important;
+      }
+    } 
+    .card {
+      z-index: 10;
+    }
+    .greenFrameFilter {
+      z-index: 11;
+    }
+    .greenFrameFilter:hover {
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -38px;
+        height: 100%;
+        width: calc(100% + 72px);
+        background-color: #1C1C1C;
+        
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        top: -38px;
+        left: 0;
+        height: calc(100% + 72px);
+        width: 100%;
+        background-color: #1C1C1C;
+        
+      }
+    }
+  }
+}
