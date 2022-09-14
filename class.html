@@ -1,10 +1,67 @@
----
-title: 課程介紹
-layout: ./app/layout.ejs
-engine: ejs
-current: class
----
-<div class="classWrap py-75 pb-lg-10">
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>課程介紹</title>
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+    <link rel="stylesheet" href="./assets/style/bootstrap.css">
+    <link rel="stylesheet" href="./assets/style/all.css">
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg py-6">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col col-9 d-flex align-items-center">
+              <h1>
+                <a class="navbar-brand m-0 d-flex align-items-center" href="./index.html"> <div class="navLogo"></div></a>
+              </h1>
+            </div>
+            <div class="col col-3 d-lg-none d-flex justify-content-end">
+              <button class="navbar-toggler border-0 px-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="material-icons text-primary">
+                  drag_handle
+                </span>
+              </button>
+            </div>
+            <div class="col col-12 col-lg-3">
+
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class=" navbar-nav me-auto mb-2 mb-lg-0 w-100 d-flex justify-content-between">
+                  <li class="nav-item">
+                    <a class="text-white text-center nav-link active px-0" aria-current="page" href="./index.html">首頁</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="text-white text-center nav-link px-0" href="./class.html">課程介紹</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="text-white text-center nav-link px-0" href="#">
+                      <span class="material-icons fs-6">
+                        account_circle
+                      </span>
+                      登入
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+    </header>
+
+    <div class="classWrap py-75 pb-lg-10">
   <div>
       <div class="swiper swipery mySwiper2 swiper-initialized swiper-horizontal swiper-pointer-events text-black">
         <div class="swiper-wrapper">
@@ -143,3 +200,15 @@ current: class
     </div>
   </div>
 </div>
+
+    <footer>
+      <p class="fs-10 m-0 text-center p-4 p-lg-6">
+        Coding Home © 2022 All Rights Reserved
+      </p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./assets/js/vendors.js"></script>
+    <script src="./assets/js/all.js"></script>
+  </body>
+
+</html>
